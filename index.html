@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/ress.css"> 
+    <link rel="stylesheet" href="css/index.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><button onclick="Home()">Home</button></li>
+            <li><button onclick="About()">About</button></li>
+            <li><button onclick="Work()">Work</button></li>
+            <li><button onclick="Contact()">Contact</button></li>
+        </ul>
+    </header>
+    <main>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="context">
+            <h1><img src="img/logo.svg" alt=""></h1>
+            <div class="solid"></div>
+            <p>This is a portfolio site created by an<br>aspiring web designer.</p>
+        </div>
+        <section class="about">
+            <h2>About</h2>
+            <div class="profile">
+                <div class="ex">
+                    <div class="MyName">
+                        <p class="name">川上 采華</p>
+                        <p class="furigana">kawakami ayaka</p>
+                    </div>
+                    <div>
+                        <p class="education">ECCコンピュータ専門学校<br>マルチメディア研究学科/Webデザインコース<br>26年卒業</p>
+                    </div>
+                </div>
+                <div class="MyPhoto">
+                    <img src="img/ayaka.svg" alt="かわかみあやかの写真">
+                </div>
+            </div>
+            <div class="SeeMore" id="Work">
+                <a href="About.html">see more</a>
+            </div>
+        </section>
+        <section class="Work">
+            <h2>Work</h2>
+            <div class="tabs">
+                <div id="btn1" class="tab activeBtn" onclick="openTab('tab1' , 'btn1')">Web Site</div>
+                <div id="btn2" class="tab" onclick="openTab('tab2' , 'btn2')">Graphic</div>        
+            </div>
+            <div id="tab1" class="tab-content tab1 active">
+                <div>
+                    <div class="FamilyConnect">
+                        <a href="FamilyConnect.html"><img src="img/FamilyConnect.svg" alt="FamilyConnectのサムネ"></a>
+                        <div class="detail">
+                            <p>family connect</p>
+                            <div class="Tag">
+                                <div class="WebDesign"><p>web design</p></div>
+                                <div class="individual"><p>個人制作</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="RaiTime">
+                        <img src="img/Raitime.svg" alt="RaiTimeのサムネ">
+                        <div class="detail">
+                            <p>RaiTime</p>
+                            <div class="Tag">
+                                <div class="WebDesign"><p>web design</p></div>
+                                <div class="team"><p>チーム制作</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="Sliss">
+                        <img src="img/Sliss.svg" alt="Slissのサムネ">
+                        <div class="detail">
+                            <p>sliss</p>
+                            <div class="Tag">
+                                <div class="WebDesign"><p>web design</p></div>
+                                <div class="team"><p>チーム制作</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="FlowerHome">
+                        <img src="img/FlowerHome.svg" alt="FlowerHomeのサムネ">
+                        <div class="detail">
+                            <p>ふらわーほーめ</p>
+                            <div class="Tag">
+                                <div class="WebDesign"><p>web design</p></div>
+                                <div class="individual"><p>個人制作</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tab-content tab2">
+                <div>
+                    <div class="calendar">
+                        <img src="img/calendar.svg" alt="カレンダーのサムネ">
+                        <div class="detail">
+                            <p>2024年カレンダー</p>
+                            <div class="Tag">
+                                <div class="graphic"><p>graphic</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="BusinessCard">
+                        <img src="img/BusinessCard.svg" alt="名刺のサムネ">
+                        <div class="detail">
+                            <p>名刺</p>
+                            <div class="Tag">
+                                <div class="graphic"><p>graphic</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="CandleNight">
+                        <img src="img/CandleNight.svg" alt="キャンドルナイトポスターのサムネ">
+                        <div class="detail">
+                            <p>キャンドルナイトポスター</p>
+                            <div class="Tag">
+                                <div class="graphic"><p>graphic</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other">
+                        <img src="img/other.svg" alt="その他のサムネ">
+                        <div class="detail">
+                            <p>その他</p>
+                            <div class="Tag">
+                                <div class="graphic"><p>graphic</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>お問い合わせはこちら</p>
+            <div class="mail">
+                <i class="fa-regular fa-envelope"></i>
+                <p>aya.kawa1109@gmail.com</p>
+            </div>
+            <div class="url">
+                <div class="icon">
+                    <a href="https://github.com/KawakamiAyaka"><i class="fa-brands fa-github"></i></a>
+                    <p>Github</p>
+                </div>
+                <div class="icon">
+                    <a href="https://www.instagram.com/aya_k1109/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <p>Instagram</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+
+            function Home() {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+            }
+            function About() {
+            window.scrollTo({
+                top: 700,
+                left: 0,
+                behavior: 'smooth'
+            });
+            }
+            function Work() {
+            window.scrollTo({
+                top: 1450,
+                left: 0,
+                behavior: 'smooth'
+            });
+            }
+            function Contact() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                left: 0,
+                behavior: 'smooth'
+            });
+            }
+        
+        function openTab(tabId, btnId) {
+            // すべてのタブコンテンツを非表示にする
+            let tabContents = document.querySelectorAll('.tab-content');
+            let tabBtn = document.querySelectorAll('.tab')
+
+            tabContents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+
+            tabBtn.forEach(function (con) {
+                con.classList.remove('activeBtn');
+            })
+
+            // クリックされたタブコンテンツを表示する
+            let selectedTab = document.getElementById(tabId);
+            selectedTab.classList.add('active');
+
+            let btn = document.getElementById(btnId);
+            btn.classList.add('activeBtn')
+        }
+    </script>
+
+</body>
+</html>

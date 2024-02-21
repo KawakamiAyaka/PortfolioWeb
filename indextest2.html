@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabs {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .tab {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+
+        .activeBtn {
+            background-color: blue;
+            color: #ffffff;
+        }
+
+        .tab1 {
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tab2 {
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .box {
+            width: 4rem;
+            height: 4rem;
+            background-color: tomato;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <div id="btn1" class="tab activeBtn" onclick="openTab('tab1' , 'btn1')">Tab 1</div>
+        <div id="btn2" class="tab" onclick="openTab('tab2' , 'btn2')">Tab 2</div>
+    </div>
+
+    <div id="tab1" class="tab-content tab1 active">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <div id="tab2" class="tab-content tab2">
+        <div class="box">1-1</div>
+        <div class="box">1-2</div>
+        <div class="box">1-3</div>
+        <div class="box">1-4</div>
+    </div>
+
+    <script>
+        function openTab(tabId, btnId) {
+            // すべてのタブコンテンツを非表示にする
+            let tabContents = document.querySelectorAll('.tab-content');
+            let tabBtn = document.querySelectorAll('.tab')
+
+            tabContents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+
+            tabBtn.forEach(function (con) {
+                con.classList.remove('activeBtn');
+            })
+
+            // クリックされたタブコンテンツを表示する
+            let selectedTab = document.getElementById(tabId);
+            selectedTab.classList.add('active');
+
+            let btn = document.getElementById(btnId);
+            btn.classList.add('activeBtn')
+        }
+    </script>
+
+</body>
+
+</html>
