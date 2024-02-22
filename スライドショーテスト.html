@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スライドショー</title>
+    <style>
+        .slideshow-container {
+            width: 600px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            /* display: flex; */
+        }
+
+        .slideBox {
+            max-width: 600px;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slideImg {
+            width: 200px;
+            height: auto;
+        }
+
+        .btnBox {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slideshow-container">
+        <div class="btnBox">
+            <button id="btn1" class="btn" onclick="prevSlide()">＜</button>
+        </div>
+        <div class="slideBox" id="slides-container">
+            <!-- <img src="./img/img03.jpg" alt="slide3" class="slideImg">s -->
+            <img src="./img/img01.jpg" alt="slide1" class="slideImg">
+            <img src="./img/img02.jpg" alt="slide2" class="slideImg">
+            <img src="./img/img03.jpg" alt="slide3" class="slideImg">
+            <!-- 追加のスライドをここに追加 -->
+            <img src="./img/img01.jpg" alt="slide1" class="slideImg">
+            <img src="./img/img02.jpg" alt="slide2" class="slideImg">
+            <img src="./img/img03.jpg" alt="slide3" class="slideImg">
+        </div>
+        <div class="btnBox">
+            <button id="btn2" class="btn" onclick="nextSlide()">＞</button>
+        </div>
+    </div>
+
+    <script>
+        const slidesContainer = document.getElementById('slides-container');
+
+        function nextSlide() {
+            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+            slidesContainer.style.transform = 'translateX(' + (-200) + 'px)';
+
+            setTimeout(() => {
+                slidesContainer.style.transition = 'none';
+                slidesContainer.style.transform = 'translateX(0)';
+
+                const firstSlide = slidesContainer.children[0];
+                slidesContainer.appendChild(firstSlide);
+            }, 500);
+        }
+
+        function prevSlide() {
+
+
+            // 強制的にリフローを発生させることで、トランジションが正しく動作するようにする
+            // slidesContainer.offsetWidth;
+            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+            slidesContainer.style.transform = 'translateX(' + (200) + 'px)';
+
+
+            setTimeout(() => {
+                slidesContainer.style.transition = 'none';
+
+                const lastSlide = slidesContainer.children[slidesContainer.children.length - 1];
+                slidesContainer.insertBefore(lastSlide, slidesContainer.children[0]);
+
+                slidesContainer.style.transform = 'translateX(0)';
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>

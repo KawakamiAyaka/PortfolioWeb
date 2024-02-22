@@ -35,7 +35,7 @@ header{
         li{
             margin: 0 30px;
 
-            button{
+            a{
                 position: relative;
                 text-decoration: none;
                 color: white;
@@ -45,11 +45,11 @@ header{
                 transition: 0.5s;
             }
 
-            button:hover{
+            a:hover{
                 color: #CF9F96;
             }
 
-            button::after{
+            a::after{
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -62,7 +62,7 @@ header{
                 transition: transform 0.5s;
             }
 
-            button:hover::after{
+            a:hover::after{
                 transform: scale(1,1);
             }
         }
@@ -249,7 +249,7 @@ header{
 
 .about{
     height: 90vh;
-    background: linear-gradient(#EAD7CC, #FCF9F7);
+    background: linear-gradient(#CF9F96, #FCF9F7);
     text-align: center;
     letter-spacing: 0.5em;
     margin: 0;
@@ -266,7 +266,7 @@ header{
         display: flex;
         margin: 0 auto;
         align-items: center;
-        gap: 100px;
+        gap: 15%;
         /* border: tomato solid 1px; */
 
         .ex{
@@ -287,7 +287,7 @@ header{
                         position: absolute;
                         top: -20px;
                         left: 0;
-                        color: rgba(207,159,150,0.3);
+                        color: rgba(234,215,204,0.3);
                         font-size: 40px;
                         font-style: italic;
                     } 
@@ -307,6 +307,7 @@ header{
                 margin-top: 100px;
                 letter-spacing: 0.5em;
                 padding: 0.2em 1.5em;
+                width: 600px;
 
                 &::before{
                     content: "EDUCATION";
@@ -340,7 +341,8 @@ header{
         line-height: 50px;
         border-radius: 30px;
         background: linear-gradient(#CF9F96, #EAD7CC);
-        box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+        /* box-shadow: 0 5px 5px rgba(0,0,0,0.4); */
+        transition: 0.5s;
     
         a{
             width: 300px;
@@ -352,6 +354,10 @@ header{
             color: #fff;
             letter-spacing: 0.5em;
         }
+    }
+    .SeeMore:hover{
+        transform: scale(1.1);
+        box-shadow: none;
     }
 }
 
