@@ -73,6 +73,7 @@ body{
         
         .Description{
             
+            
             >p{
                 width: 450px;
                 font-size: 1.5em;
@@ -85,6 +86,13 @@ body{
                 gap: 5%;
                 font-size: 1.5em;
                 margin: 25% 0 20px 0;
+
+                .graphic{
+                    color: #fff;
+                    background: #CF96A7;  
+                    padding: 5px 10px;
+                    border-radius: 20px;          
+                }
 
                 .WebDesign{
                     background: #96B4CF;

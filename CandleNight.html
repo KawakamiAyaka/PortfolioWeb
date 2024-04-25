@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/CandleNight.css">
+    <title>キャンドルナイト</title>
+</head>
+
+<body>
+    <main>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="FamilyConnect">
+            <div class="content">
+                <div class="title">
+                    <div class="back">
+                        <a href="index.html"><i class="fa-solid fa-chevron-left"></i></i></a>
+                        <a href="index.html">back</a>
+                    </div>
+                    <h2>キャンドルナイト</h2>
+                </div>
+                
+                <div class="DescriptionBox">
+                    <div class="Description">
+                        <div class="candleImg">
+                            <img src="img/CandleNight.png" alt="キャンドルナイトポスター">
+                        </div>
+
+                        <div class="Tag">
+                            <div class="graphic"><p>graphic</p></div>
+                        </div>
+
+                        <div class="PositionBox">
+                            <p class="Position">Position</p>
+                            <p>デザイン</p>
+                        </div>
+
+                        <div class="ToolBox">
+                            <p class="Tool">Tool</p>
+                            <p>Illustrator</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="learned">
+                    <h3>＜学んだこと＞</h3>
+                    <p>実際に依頼をいただいてデザインを試みるのは初めての経験でした。残念ながら選ばれなかったのですがデザインの基本的な考え方や、クライアントの要望をどのように取り入れるかなど、言語化の難しい部分を学ぶことができました。また、デザインの提案をする際には、自分の考えをしっかりと伝えることが大切だと感じました。
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="OtherWork">
+            <h2>Other Work</h2>
+            <div class="tabs">
+                <div id="btn1" class="tab activeBtn" onclick="openTab('tab1' , 'btn1')">Web Site</div>
+                <div id="btn2" class="tab" onclick="openTab('tab2' , 'btn2')">Graphic</div>
+            </div>
+        
+            <div id="tab1" class="tab-content tab1 active">
+                <div class="slideshow-container">
+                    <div class="btnBox">
+                        <button id="btn1" class="btn" onclick="prevSlide()"><i class="fa-solid fa-caret-left"></i></button>
+                    </div>
+                    <div class="slideBox" id="slides-container">
+                        <!-- <img src="./img/img03.jpg" alt="slide3" class="slideImg">s -->
+                        <img src="./img/Raitime.svg" alt="slide1" class="slideImg">
+                        <img src="./img/sliss.svg" alt="slide2" class="slideImg">
+                        <img src="./img/FlowerHome.svg" alt="slide3" class="slideImg">
+                        <!-- 追加のスライドをここに追加 -->
+                        <!-- <img src="./img/img01.jpg" alt="slide1" class="slideImg">
+                        <img src="./img/img02.jpg" alt="slide2" class="slideImg">
+                        <img src="./img/img03.jpg" alt="slide3" class="slideImg"> -->
+                    </div>
+                    <div class="btnBox">
+                        <button id="btn2" class="btn" onclick="nextSlide()"><i class="fa-solid fa-caret-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tab2" class="tab-content tab2">
+                <div class="slideshow-container">
+                    <div class="btnBox">
+                        <button id="btn1" class="btn" onclick="prevSlide()"><i class="fa-solid fa-caret-left"></i></button>
+                    </div>
+                    <div class="slideBox" id="slides-container">
+                        <!-- <img src="./img/img03.jpg" alt="slide3" class="slideImg">s -->
+                        <img src="./img/calendar.svg" alt="slide1" class="slideImg">
+                        <img src="./img/CandleNight.svg" alt="slide2" class="slideImg">
+                        <img src="./img/BusinessCard.svg" alt="slide3" class="slideImg">
+                        <!-- 追加のスライドをここに追加 -->
+                        <!-- <img src="./img/other.svg" alt="slide1" class="slideImg"> -->
+                        <!-- <img src="./img/img02.jpg" alt="slide2" class="slideImg"> -->
+                        <!-- <img src="./img/img03.jpg" alt="slide3" class="slideImg"> -->
+                    </div>
+                    <div class="btnBox">
+                        <button id="btn2" class="btn" onclick="nextSlide()"><i class="fa-solid fa-caret-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </main>
+    <script>
+        function openTab(tabId, btnId) {
+            // すべてのタブコンテンツを非表示にする
+            let tabContents = document.querySelectorAll('.tab-content');
+            let tabBtn = document.querySelectorAll('.tab')
+
+            tabContents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+
+            tabBtn.forEach(function (con) {
+                con.classList.remove('activeBtn');
+            })
+
+            // クリックされたタブコンテンツを表示する
+            let selectedTab = document.getElementById(tabId);
+            selectedTab.classList.add('active');
+
+            let btn = document.getElementById(btnId);
+            btn.classList.add('activeBtn')
+        }
+
+        // スライドショー
+
+        const slidesContainer = document.getElementById('slides-container');
+
+        function nextSlide() {
+            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+            slidesContainer.style.transform = 'translateX(' + (-200) + 'px)';
+
+            setTimeout(() => {
+                slidesContainer.style.transition = 'none';
+                slidesContainer.style.transform = 'translateX(0)';
+
+                const firstSlide = slidesContainer.children[0];
+                slidesContainer.appendChild(firstSlide);
+            }, 500);
+        }
+
+        function prevSlide() {
+
+
+            // 強制的にリフローを発生させることで、トランジションが正しく動作するようにする
+            // slidesContainer.offsetWidth;
+            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+            slidesContainer.style.transform = 'translateX(' + (200) + 'px)';
+
+
+            setTimeout(() => {
+                slidesContainer.style.transition = 'none';
+
+                const lastSlide = slidesContainer.children[slidesContainer.children.length - 1];
+                slidesContainer.insertBefore(lastSlide, slidesContainer.children[0]);
+
+                slidesContainer.style.transform = 'translateX(0)';
+            }, 500);
+        }
+
+        // const slideWrap = document.querySelector(".tab1_slideWrap")
+        // let slideArray = document.querySelectorAll(".slideImg")
+        // const slideMove = () => {
+        //     slideArray.forEach((e,i) => {
+        //         e.addEventListener("click", () => {
+        //             if (i === 0) { // 配列の最初（左端）の画像がクリックされた場合
+        //                 slideWrap.style.transform = `translateX(-${(i + 1) * 490}px)`
+        //                 slideWrap.innerHTML += `<img src="${slideArray[i+1].getAttribute("src")}" alt="レイタイムのサムネ" class="slideImg">`
+        //             } else { // それ以外の画像がクリックされた場合
+        //                 slideWrap.style.transform = `translateX(-${(i - 1) * 490}px)`
+        //                 slideWrap.innerHTML += `<img src="${slideArray[i-2].getAttribute("src")}" alt="レイタイムのサムネ" class="slideImg">`
+        //             }
+        //             slideArray = document.querySelectorAll(".slideImg")
+        //             slideMove()
+        //         })
+        //     })
+        // }
+
+        // slideMove()
+
+        // const btn1 = document.querySelector(".btn1");
+        // const btn2 = document.querySelector(".btn2");
+        // let slideCount = 0;
+
+        // btn1.addEventListener("click", () => {
+        //     if (slideCount === 0) {
+        //         slideCount = slideArray.length - 1;
+        //     } else {
+        //         slideCount--;
+        //     }
+        //     slideWrap.style.transform = `translateX(-${slideCount * 490}px)`;
+        // });
+
+        // btn2.addEventListener("click", () => {
+        //     if (slideCount === slideArray.length - 1) {
+        //         slideCount = 0;
+        //     } else {
+        //         slideCount++;
+        //     }
+        //     slideWrap.style.transform = `translateX(-${slideCount * 490}px)`;
+        // });
+
+        // 画像の配列を取得
+// let slideImages = Array.from(document.querySelectorAll('.slideImg'));
+
+// 現在の画像のインデックスを設定
+// let currentIndex = 0;
+
+// ボタンを取得
+// let btn1 = document.querySelector('.btn1');
+// let btn2 = document.querySelector('.btn2');
+
+// ボタン1（左）のクリックイベント
+// btn1.addEventListener('click', function() {
+    // 最初の画像を取得し、DOMから削除
+    // let firstImage = slideImages.shift();
+    // firstImage.parentNode.removeChild(firstImage);
+
+    // 画像を配列とDOMの最後に追加
+    // slideImages.push(firstImage);
+    // document.querySelector('#slide').appendChild(firstImage);
+
+    // 新しい最初の画像を表示
+//     slideImages[0].style.display = 'block';
+// });
+
+// ボタン2（右）のクリックイベント
+// btn2.addEventListener('click', function() {
+    // 最後の画像を取得し、DOMから削除
+    // let lastImage = slideImages.pop();
+    // lastImage.parentNode.removeChild(lastImage);
+
+    // 画像を配列とDOMの最初に追加
+    // slideImages.unshift(lastImage);
+    // document.querySelector('#slide').insertBefore(lastImage, document.querySelector('#slide').firstChild);
+
+    // 新しい最初の画像を表示
+//     slideImages[0].style.display = 'block';
+    
+// });
+
+
+
+    </script>
+</body>
+
+</html>
