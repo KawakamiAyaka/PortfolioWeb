@@ -65,14 +65,12 @@ body{
         }
     }
 
-    .img{
-        width: 80%;
+    .gridImg{
+        /* width: 80%; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin: 20px auto 0;
-        padding: 20px;
         background: rgb(207, 159, 150, 0.6);
 
             img{
@@ -84,17 +82,19 @@ body{
 
     .DescriptionBox{
         width: 70%;
-        margin: 20px auto;
+        margin: 50px auto;
 
         
         .Description{
-            
+        
             
             >p{
                 width: 450px;
                 font-size: 1.5em;
                 margin: 20px 0;
             }
+
+
 
             .Tag{
                 display: flex;
@@ -136,16 +136,15 @@ body{
     }
 
     .learned{
-        width: 70%;
-        margin: 20px auto;
-
+    
         h3{
             font-size: 2em;
         }
 
         p{
             font-size: 1.5em;
-            letter-spacing: 0.5em;
+            /* letter-spacing: 0.5em; */
+            margin-right: 10px;
         }
     }
 }
